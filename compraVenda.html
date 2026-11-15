@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Compra e Venda Amisse Ibraimo</title>
+  <link rel="stylesheet" href="compraVenda.css">
+</head>
+<body>
+
+<header class="topo">
+  <span class="marca">Compra e Venda</span>
+  <nav>
+    <a href="#artigos">Artigos</a>
+    <a href="#vender">Vender</a>
+    <a href="#cadastro">Cadastro</a>
+    <a href="#contactos">Contactos</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Bem-vindo à Compra e Venda Amisse Ibraimo</h1>
+  <p>Encontre os melhores artigos novos e usados. Qualidade garantida e atendimento personalizado.</p>
+  <form class="pesquisa" id="formPesquisa">
+    <input type="search" id="pesquisa" placeholder="O que você procura hoje?" aria-label="Pesquisar artigos">
+    <button type="submit">Buscar Artigos</button>
+  </form>
+</section>
+
+<main>
+  <!-- ARTIGOS: Venda e Compras -->
+  <section id="artigos" class="bloco">
+    <h2>Artigos</h2>
+    <div class="grupo" data-f="tipo">
+      <button class="ativo" data-v="venda">Venda</button>
+      <button data-v="compra">Compras</button>
+    </div>
+    <div class="grupo" data-f="cat">
+      <button class="ativo" data-v="todos">Todos</button>
+      <button data-v="eletronicos">Acessórios eletrónicos</button>
+      <button data-v="roupas">Roupas</button>
+      <button data-v="calcados">Calçados</button>
+    </div>
+    <div class="grupo" data-f="estado">
+      <button class="ativo" data-v="todos">Novos e usados</button>
+      <button data-v="novo">Novos</button>
+      <button data-v="usado">Usados</button>
+    </div>
+    <div id="lista" class="grelha"></div>
+  </section>
+
+  <!-- ADICIONAR ARTIGO PARA VENDER -->
+  <section id="vender" class="bloco">
+    <h2>Quer vender um artigo?</h2>
+    <form id="formVender" class="form">
+      <input name="nome" placeholder="Nome do artigo" required>
+      <select name="categoria" required>
+        <option value="eletronicos">Acessórios eletrónicos</option>
+        <option value="roupas">Roupas</option>
+        <option value="calcados">Calçados</option>
+      </select>
+      <select name="estado" required>
+        <option value="novo">Novo</option>
+        <option value="usado">Usado</option>
+      </select>
+      <input name="preco" placeholder="Preço (MT)" required>
+      <input name="contacto" placeholder="O seu contacto" required>
+      <input name="imagem" placeholder="Imagem (opcional) ex: imagens/foto.jpg">
+      <button type="submit">Publicar para venda</button>
+    </form>
+    <p class="msg" id="msgVender"></p>
+  </section>
+
+  <!-- CADASTRO POR E-MAIL -->
+  <section id="cadastro" class="bloco">
+    <h2>Cadastre-se</h2>
+    <form id="formCadastro" class="form">
+      <input type="email" name="email" placeholder="O seu e-mail" required>
+      <button type="submit">Cadastrar</button>
+    </form>
+    <p class="msg" id="msgCadastro"></p>
+  </section>
+</main>
+
+<!-- CONTACTOS -->
+<footer id="contactos" class="rodape">
+  <div><strong>Contacto:</strong> <span id="numeroCliente">868564919</span></div>
+  <a href="https://wa.me/258868564919" target="_blank" rel="noopener">WhatsApp</a>
+  <a href="https://facebook.com/AmisseIbraimoVendas" target="_blank" rel="noopener">Facebook: /AmisseIbraimoVendas</a>
+  <a href="mailto:seuemail@exemplo.com">E-mail</a>
+</footer>
+
+<script src="compraVenda.js"></script>
+</body>
+</html>
